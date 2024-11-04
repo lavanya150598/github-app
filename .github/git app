@@ -1,0 +1,19 @@
+name: Create Git App  
+  
+on:  
+  workflow_dispatch:  
+  
+jobs:  
+  create-app:  
+   runs-on: ubuntu-latest  
+   steps:  
+    - name: Create Git App  
+      uses: github/actions/create-app@v1  
+      with:  
+       token: ${{ secrets.GITHUB_TOKEN }}  
+       org: MyCompany  
+       name: MyApp  
+       description: A simple web app for testing  
+       homepage: https://myapp.com
+   
+       
